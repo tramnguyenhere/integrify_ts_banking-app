@@ -36,7 +36,14 @@ class Branch {
         }
     }
 
-    findCustomer() {
-        
+    findCustomer(id: string): Customer | null{
+        const customer = this.customers.find(customer => customer.getId === id);
+        if (customer) {
+            return customer
+        } else {
+            return null
+        }
     }
 }
+
+export default Branch
