@@ -24,12 +24,12 @@ class Customer {
         return this.transactions
     }
 
-    get getBalance(): number {
+    getBalance(): number {
         return this.transactions.reduce((balance, transaction) => balance + transaction.amount, 0);
     }
     
-    addTransaction(amount: number): boolean {
-        const currentBalance = this.getBalance;
+    addTransactions(amount: number): boolean {
+        const currentBalance = this.getBalance();
         const transaction:Transaction = {
             amount: amount,
             date: new Date()

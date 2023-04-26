@@ -31,7 +31,7 @@ class Branch {
         if (!customer) {
             return false;
         } else {
-            customer.addTransaction(amount);
+            customer.addTransactions(amount);
             return true
         }
     }
